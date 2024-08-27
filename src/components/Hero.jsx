@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
 import SwingText from "../util components/SwingText";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -15,10 +16,7 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white `}>
-            Hi, I'm{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-cyan-500">
-              Sameer
-            </span>
+            Hi, I'm Sameer
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100 `}>
             {/* a passionate Full Stack Web Developer with a knack for creating
@@ -35,20 +33,21 @@ const Hero = () => {
         </div>
       </div>
       <ComputersCanvas />
-      <div className="absolute xs:bottom-8 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[30px] h-[50px] rounded-3xl border-4 border-secondary p-[5.4px]">
-            {/* not added flex justify-center items-start by myself, but the author did */}
-            <motion.div
-              animate={{ y: [0, 20, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
-          </div>
+      <div className="absolute xs:bottom-4 bottom-32 w-full flex justify-center items-center">
+        <a
+          href="#about"
+          className="w-[30px] h-[50px] rounded-3xl border-4 border-black p-[5.4px]"
+        >
+          {/* not added flex justify-center items-start by myself, but the author did */}
+          <motion.div
+            animate={{ y: [0, 20, 0] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="w-3 h-3 rounded-full bg-black mb-1"
+          />
         </a>
       </div>
     </section>
