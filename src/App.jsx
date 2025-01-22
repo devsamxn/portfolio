@@ -15,19 +15,19 @@ const App = () => {
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center relative">
-          <Navbar />
-          <Hero />
-          <About />
-          <Experience />
-          <Tech />
-          <Works />
-          <Feedbacks />
-          <div className="relative z-0">
-            <Contact />
+            <Navbar />
+            <Hero />
+            <About />
+            <Tech />
+            {/* <Experience /> */}
+            <Works />
+            {/* <Feedbacks /> */}
+            {/* <div className="relative z-0">
             <StarsCanvas />
+            <Contact />
+            </div> */}
           </div>
         </div>
-      </div>
     </BrowserRouter>
   );
 };

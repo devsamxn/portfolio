@@ -9,22 +9,23 @@ import { fadeIn, textVariant } from "../utils/motion";
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant(-1)}>
-        <p className={styles.sectionSubText}>My work</p>
+      <motion.div variants={textVariant()}>
+        {/* <p className={styles.sectionSubText}>My work</p> */}
         <h2 className={styles.sectionHeadText}>
-          <span className={styles.gradientText}>Projects</span>
+          <span className="text-white font-semibold font-mono">Projects</span>
         </h2>
       </motion.div>
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-4 text-secondary text-white text-[20px] leading-[40px] text-justify"
         >
-          Following projects showcase my skills and experience through
-          real-wrold examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Here are some of the projects I've worked on, built from scratch with
+          a focus on intuitive user experiences and seamless functionality. Each
+          project showcases my ability to translate ideas into real-world
+          applications, leveraging modern technologies to create dynamic and
+          user-friendly solutions. Click on the cards to explore the live demos
+          or on the github icon to see the code!"
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
@@ -42,47 +43,50 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_Link,
+  source_code_link,
+  live_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer"
       >
-        <div className="relative w-full h-[230px] ">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full  object-cover rounded-2xl"
-          />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_Link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-[75%] h-[75%] object-cover"
-              />
+        <div onClick={() => window.open(live_link, "_blank")}>
+          <div className="relative w-full h-[230px]">
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full  object-cover rounded-2xl"
+            />
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={github}
+                  alt="github"
+                  className="w-[75%] h-[75%] object-cover"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="mt-5">
-          <h3 className="text-white font-bold text=[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] ">{description}</p>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
+          <div className="mt-5 text-white">
+            <h3 className="text-white font-bold text=[24px]">{name}</h3>
+            <p className="mt-2 text-[15px] text-justify">{description}</p>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+                #{tag.name}
+              </p>
+            ))}
+          </div>
         </div>
       </Tilt>
     </motion.div>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");

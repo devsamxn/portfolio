@@ -9,28 +9,65 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
+        {/* <p className={styles.sectionSubText}>Introduction</p> */}
         <h2 className={styles.sectionHeadText}>
-          <span className={styles.gradientText}>Overview</span>
+          <span className="text-white font-semibold font-mono text-center">
+            Introduction
+          </span>
         </h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]  "
+        className="mt-4 text-secondary text-white text-[20px] leading-[40px] text-justify"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        <p>
+          {"<"}I am a master’s student at{" "}
+          <span className="bg-gradient-to-r from-violet-200 to-pink-200 text-black rounded-sm">
+            Indian Institute of Technology, Guwahati
+          </span>
+          , bridging my academic background in geotechnical engineering with my
+          passion for technology to solve complex problems and drive innovation.
+          {"/>"}
+        </p>
+        <br />
+        <p>
+          {"<"}I am deeply passionate about development, constantly exploring
+          new technologies and frameworks to build efficient and user-friendly
+          applications. Through personal projects, I have built a strong
+          foundation in{" "}
+          <span className="bg-gradient-to-r from-violet-200 to-pink-200 text-black rounded-sm">
+            Front-End
+          </span>{" "}
+          and{" "}
+          <span className="bg-gradient-to-r from-violet-200 to-pink-200 text-black rounded-sm">
+            Back-End
+          </span>{" "}
+          development, gaining proficiency in JavaScript frameworks, now
+          expanding my expertise in Java-based technologies. My curiosity drives
+          me to continuously learn and experiment.
+          {"/>"}
+        </p>
+        <br />
+        <p>
+          {"<"}
+          Beyond development, I am also engaged in{" "}
+          <span className="bg-gradient-to-r from-violet-200 to-pink-200 text-black">
+            Research
+          </span>
+          , where my master's thesis research integrates the blasting and impact
+          related aspect of rock mechanics and machine learning, focusing on
+          predicting experimental outcomes which can't be performed in the
+          laboratories. Leading a team of five, we have designed and set up
+          advanced impact-dynamic instruments in our institute's lab, and are
+          currently in the process of publishing our research in a reputed
+          journal.{"/>"}
+        </p>
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      {/* <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

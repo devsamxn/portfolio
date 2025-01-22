@@ -23,6 +23,14 @@ import {
   jobit,
   tripguide,
   threejs,
+  harvard,
+  express,
+  reactquery,
+  next,
+  mysql,
+  delieats,
+  highlandhaven,
+  employee,
 } from "../assets";
 
 export const navLinks = [
@@ -31,13 +39,17 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "tech",
+    title: "Tech",
   },
   {
-    id: "contact",
-    title: "Contact",
+    id: "projects",
+    title: "Projects",
   },
+  // {
+  //   id: "socials",
+  //   title: "Socials",
+  // },
 ];
 
 const services = [
@@ -61,13 +73,32 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "React JS",
+    icon: reactjs,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "MongoDB",
+    icon: mongodb,
   },
+  { name: "Express JS", icon: express },
+  {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "MySQL",
+    icon: mysql,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
+  },
+  { name: "React Query", icon: reactquery },
+  { name: "Next JS", icon: next },
   {
     name: "JavaScript",
     icon: javascript,
@@ -76,40 +107,17 @@ const technologies = [
     name: "TypeScript",
     icon: typescript,
   },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
+
   {
     name: "Three JS",
     icon: threejs,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
+    name: "Docker",
     icon: docker,
   },
 ];
@@ -118,8 +126,8 @@ const experiences = [
   {
     title: "React.js Developer",
     company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
+    icon: harvard,
+    iconBg: "#ffffff",
     date: "March 2020 - April 2021",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -131,8 +139,8 @@ const experiences = [
   {
     title: "React Native Developer",
     company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
+    icon: harvard,
+    iconBg: "#ffffff",
     date: "Jan 2021 - Feb 2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -198,54 +206,75 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Deli Eats",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Food ordering platform with a seamless UI, offering cuisine and location-based filtering for an intuitive user experience. Developed tools for restaurant owners to manage listings, upload images, and update delivery statuses. Designed with a responsive layout, ensuring a seamless experience across both desktop and mobile devices.",
     tags: [
       {
-        name: "react",
+        name: "react.js",
         color: "blue-text-gradient",
+      },
+      {
+        name: "express.js",
+        color: "green-text-gradient",
       },
       {
         name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
         color: "pink-text-gradient",
       },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
+
       {
-        name: "react",
+        name: "tailwindCSS",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+    ],
+    image: delieats,
+    source_code_link: "https://github.com/devsamxn/DeliEats-frontend",
+    live_link: "https://eats-4yyn.onrender.com/",
+  },
+  {
+    name: "The Highland Haven",
+    description:
+      "Resort booking platform with an intuitive and user-friendly experience, offering detailed resort and room information, advanced cabin filtering, and hassle-free reservation management. Designed to provide a smooth and efficient booking experience for users across all devices.",
+    tags: [
+      {
+        name: "next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react.js",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "node.js",
         color: "pink-text-gradient",
       },
+
+      {
+        name: "tailwindCSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      // Next.js, React.js, Node.js, Tailwind CSS, NextAuth.js, Supabase
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: highlandhaven,
+    source_code_link: "https://github.com/devsamxn/the-highland-haven",
+    live_link: "https://thehighlandhaven.vercel.app/",
   },
   {
-    name: "Trip Guide",
+    name: "The Highland Haven-Admin App",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Internal resort management platform designed for admins and employees to streamline user administration, booking and sales management. Features an interactive dashboard for visualizing sales, stay durations, and occupancy trends. Equipped with tools for analyzing bookings and  monitoring check-ins/check-outs, and optimizing operational efficiency to enhance decision-making and workflow management.",
     tags: [
       {
-        name: "nextjs",
+        name: "react.js",
         color: "blue-text-gradient",
       },
       {
@@ -253,12 +282,19 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "recharts",
         color: "pink-text-gradient",
       },
+      {
+        name: "react-query",
+        color: "green-text-gradient",
+      },
+      // Used React for UI, Supabase for BaaS, Styled-components for component level styling, React-Queryfor server state management, and Recharts for dynamic data visualizations.
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: employee,
+    source_code_link:
+      "https://github.com/devsamxn/the-highland-haven-employee-app",
+    live_link: "https://thehighlandhaven-staff.vercel.app",
   },
 ];
 

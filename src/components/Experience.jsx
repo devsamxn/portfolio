@@ -12,9 +12,9 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What i have done so far</p>
+        <p className={styles.sectionSubText}>My Tech Journey</p>
         <h2 className={styles.sectionHeadText}>
-          <span className={styles.gradientText}>Work experience</span>
+          <span className="text-white">Learnings</span>
         </h2>
       </motion.div>
       <div className="mt-20 flex flex-col">
@@ -36,11 +36,11 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className="flex justify-center items-center w-full h-full">
+        <div className="flex justify-center items-center w-[full] h-full">
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain"
+            className="w-[full] h-[full] object-cover"
           />
         </div>
       }

@@ -3,7 +3,7 @@ const SwingText = () => {
   return (
     <MovingComponent
       type="typewriter"
-      dataText={[`A passionate self-taught Full Stack Web Developer.`]}
+      dataText={[`A passionate self-taught <Software Developer/>.`]}
     />
   );
 };

@@ -25,19 +25,32 @@ const Navbar = () => {
             Sameer Negi
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text=[18px] font-medium cursor-pointer `}
-              onClick={() => setActive(link.title)}
+        <div className="flex gap-5 items-center">
+          <ul className="list-none hidden sm:flex flex-row gap-10">
+            {navLinks.map((link) => (
+              <li
+                key={link.id}
+                className={`${
+                  active === link.title ? "text-white" : "text-secondary"
+                } hover:text-white text=[18px] font-medium cursor-pointer `}
+                onClick={() => setActive(link.title)}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            ))}
+          </ul>
+          <div className="flex gap-5">
+            <div
+              className="bg-white text-black rounded-lg p-1 hover:bg-slate-700 hover:text-white cursor-pointer"
+              onClick={() =>
+                window.open("https://www.linkedin.com/in/sameernegi/", "_blank")
+              }
             >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
+              LinkedIn
+            </div>
+            {/* <div>GitHub</div> */}
+          </div>
+        </div>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -67,6 +80,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
+          {/* <div>LinkedIn</div> */}
         </div>
       </div>
     </nav>
